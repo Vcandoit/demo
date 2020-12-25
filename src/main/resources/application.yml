@@ -1,0 +1,20 @@
+server:
+  port: 9494
+  servlet:
+    context-path: /demo
+#spring:
+#  thymeleaf:
+#    prefix: classpath:/templates/
+
+spring:
+  datasource:
+    name: alumni  #数据库名
+    url: jdbc:mysql://localhost:3306/alumni?serverTimezone=UTC #url
+    username: root  #用户名
+    password: 123  #密码
+    driver-class-name: com.mysql.cj.jdbc.Driver #数据库链接驱动
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #配置映射文件
+  type-aliases-package: com.jgy.demo.bean #配置实体类
